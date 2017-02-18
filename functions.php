@@ -12,3 +12,15 @@ add_action( 'after_setup_theme', 'tsc_after_setup_theme' );
 function tsc_after_setup_theme() {
 	register_nav_menu( 'evergreen-content', __( 'Evergreen Menu', 'twentyseventeen-child' ) );
 }
+
+add_action( 'widgets_init', 'tsc_widget_init' );
+
+function tsc_widget_init() {
+	register_sidebar(
+		array(
+			'id'          => 'footer-widget-area',
+			'name'        => __( 'Footer Widget Area', 'twentyseventeen-child' ),
+			'description' => __( 'Adds a widget.', 'twentyseventeen-child' ),
+		)
+	);
+}

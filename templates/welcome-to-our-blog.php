@@ -51,6 +51,9 @@ get_header(); ?>
 
             </main><!-- #main -->
         </div><!-- #primary -->
+
+        <?php get_sidebar('footer'); ?>
+
     </div><!-- .wrap -->
 
 <?php get_footer(); ?>
